@@ -1,6 +1,7 @@
 class People {
-    constructor(name) {
+    constructor(name, house) {
         this.name = name
+        this.house = house
     }
     saySomething() {
 
@@ -8,8 +9,8 @@ class People {
 }
 
 class A extends People {
-    constructor(name) {
-        super(name)
+    constructor(name, house) {
+        super(name, house)
     }
     saySomething() {
         alert('I am A')
@@ -17,15 +18,16 @@ class A extends People {
 }
 
 class B extends People {
-    constructor(name) {
-        super(name)
+    constructor(name, house) {
+        super(name, house)
     }
     saySomething() {
         alert('I am B')
     }
 }
 
-let a = new A('a')
+let aHouse = new House('beijing')
+let a = new A('a', aHouse)
 a.saySomething()
 let b = new B('b')
 b.saySomething()
