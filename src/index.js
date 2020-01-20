@@ -1,7 +1,11 @@
 class People {
+    name
+    age
+    protectd weight
     constructor(name, age) {
         this.name = name
         this.age = age
+        this.weight = 120
     }
     eat() {
         alert(`${this.name} eat something`)
@@ -12,20 +16,22 @@ class People {
 }
 
 class Student extends People {
+    number
+    private girlfriend
     constructor(name, age, number) {
         super(name, age)
         this.number = number
+        this.girlfriend = 'xiaoli'
     }
     study() {
         alert(`${this.name} study`)
     }
+    getWeight() {
+        alert(`weight ${this.weight}`)
+    }
 }
 
 let xiaoming = new Student('xiaomimg', 10, 'A1')
-xiaoming.study()
-alert(xiaoming.number)
-xiaoming.eat()
+xiaoming.getWeight()
+alert(xiaoming.girlfriend)
 
-let xiaohong = new Student('xiaohong', 11, 'A2')
-xiaohong.study()
-xiaohong.speak()
